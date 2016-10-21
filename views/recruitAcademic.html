@@ -1,4 +1,4 @@
-<div class="card-view">
+<div class="table-view">
     <div class="card-brand">
         <a name="doctor"></a>
         <span>博士班</span>
@@ -14,6 +14,9 @@
         <tbody id="info-doctor">
         </tbody>
 
+    </table>
+
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>入學考試題目</th>
@@ -22,7 +25,9 @@
         </thead>
         <tbody id="exam-doctor">
         </tbody>
+    </table>
 
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>評估推薦表</th>
@@ -35,6 +40,6 @@
 </div>
 
 <script>
-    $("title").text("系所成員 |" + "中興資工系");
+    $("title").text("招生資訊 |" + "中興資工系");
     fetchJson("recruit", bindRecruit);
 </script>

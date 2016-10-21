@@ -11,7 +11,7 @@ function bindChairman(data) {
             "class": "col-xs-12 col-md-3",
             "html": $("<img/>", {
                 "class": "img-thumbnail",
-                "src": "http://www.cs.nchu.edu.tw/v3x/faculty_photo/" + data[i].photo
+                "src": "http://www.cs.nchu.edu.tw/faculty_photo/" + data[i].photo
             })
         });
 

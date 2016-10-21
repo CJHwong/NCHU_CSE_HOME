@@ -8,7 +8,7 @@ function urlify(text) {
 function bindPost(data) {
     "use strict";
     var postList = $("#post-list");
-    var li, a, span;
+    var li, a, span, icon, div;
     var i, len;
     for (i = data.length - 1, len = data.length - 6; i > len; i -= 1) {
         a = $("<a/>");
@@ -16,12 +16,21 @@ function bindPost(data) {
             .text(data[i].subject)
             .attr("href", "?id=" + data[i]["nno"] + "#news");
         span = $("<span/>");
-        span.text(data[i].post_date);
-        li = $("<li/>");
-        li
-            .addClass("post")
+        span.text(data[i].update);
+
+
+        div = $("<div>")
             .append(span)
             .append(a);
+
+        // icon = $("<i class='icon ion-play'>");
+        icon = $("<img class='list-icon' src='img/nar1-05.png'>")
+
+        li = $("<li/>")
+            .addClass("post")
+            .append(icon)
+            .append(div);
+
         postList.append(li);
     }
 };
@@ -31,7 +40,7 @@ function bindNews(data) {
     var currentM = -1;
     var date;
     var monthKey = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-    var news = $("#news");
+    var news = $("#news-container");
     var ul, li, a, span, context, div;
     var i, len;
     ul = $("<ul/>", {
@@ -39,10 +48,49 @@ function bindNews(data) {
     });
 
     if (savedNews == undefined) {
-      savedNews = data;
+        savedNews = data;
     } else {
-      data = savedNews;
+        data = savedNews;
     }
+
+    if (yearBreak.length == 0) {
+        var currentY = (new Date()).getFullYear();
+        for (i = data.length - 1, len = 0; i > len; i -= 1) {
+            if (parseInt(data[i].update.split("-")[0], 10) != currentY) {
+                yearBreak[yearBreak.length] = i
+                currentY = parseInt(data[i].update.split("-")[0], 10)
+            }
+        }
+    }
+    currentY = (new Date()).getFullYear();
+
+    var selectYear = $("#news-year");
+    var selectMonth = $("#news-month");
+    var y, m;
+    var option;
+    if (selectYear.children().length == 0) {
+        for (y = (new Date()).getFullYear(); y >= 2012; y--) {
+            option = $("<option value='" + y + "'>").text(y);
+            selectYear.append(option);
+        }
+        // selectMonth.append($("<option value='0'>").text('ALL'));
+        // for (m = 0; m < monthKey.length; m++) {
+        //     option = $("<option value='" + (m + 1) + "'>").text(monthKey[m]);
+        //     selectMonth.append(option);
+        // }
+    }
+    selectYear.bind("change", function(e) {
+        if (currentY - selectYear.val() == 0 || selectYear.val() == 0) {
+            start = 0;
+            end = 30;
+        } else {
+            start = data.length - yearBreak[(currentY - selectYear.val()) - 1];
+            end = start + 30;
+
+        }
+        news.children().remove();
+        bindNews(data);
+    });
 
     for (i = data.length - 1 - start, len = data.length - 1 - end; i > len; i -= 1) {
         a = $("<a/>", {
@@ -50,7 +98,7 @@ function bindNews(data) {
         });
 
         span = $("<span/>", {
-            "text": data[i].post_date
+            "text": data[i].update
         });
 
         context = $("<pre/>", {
@@ -74,7 +122,7 @@ function bindNews(data) {
             }
         })
 
-        date = new Date(data[i].post_date.split(" ")[0]);
+        date = new Date(data[i].update.split(" ")[0]);
         if ((date.getMonth()) != currentM && i - 1 != len) {
             var brand = $("<div/>", {
                 "class": "card-brand"
@@ -96,17 +144,18 @@ function bindNews(data) {
     }
     news.append(ul);
 
-    start = start + end;
-    end = end + end;
+    start = end;
+    end = end + 10;
     if (end >= data.length) {
         start = end;
+        end = start
     }
 };
 
 function bindNewsItem(data) {
     "use strict";
     data = data[0];
-    var news = $("#news");
+    var news = $("#news-container");
     var ul, li, a, span, context, aFile, div;
     ul = $("<ul/>", {
         "class": "news-list"
@@ -116,7 +165,7 @@ function bindNewsItem(data) {
         "text": data.subject
     });
     span = $("<span/>", {
-        "text": data.post_date
+        "text": data.update
     });
     context = $("<pre/>", {
         "class": "news-text",
@@ -147,7 +196,7 @@ function bindHonor(data) {
     var currentM = -1;
     var date;
     var monthKey = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-    var news = $("#honor");
+    var news = $("#honor-container");
     var ul, li, a, span, context, div;
     var i, len;
     ul = $("<ul/>", {
@@ -155,9 +204,9 @@ function bindHonor(data) {
     });
 
     if (savedHonor == undefined) {
-      savedHonor = data;
+        savedHonor = data;
     } else {
-      data = savedHonor;
+        data = savedHonor;
     }
 
     for (i = data.length - 1 - start, len = data.length - 1 - end; i > len; i -= 1) {
@@ -191,9 +240,10 @@ function bindHonor(data) {
     }
     news.append(ul);
 
-    start = start + end;
-    end = end + end;
+    start = end;
+    end = end + 10;
     if (end >= data.length) {
         start = end;
+        end = start;
     }
 };

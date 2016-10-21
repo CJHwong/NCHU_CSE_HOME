@@ -25,6 +25,7 @@ function redirect() {
             case "studentList":
             case "faculty":
             case "facultyPT":
+            case "facultyRetire":
             case "lab":
             case "document":
             case "documentBachelor":

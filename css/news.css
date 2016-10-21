@@ -1,3 +1,7 @@
+#news-year {
+  float: right;
+}
+
 .news-list, .event-list {
     padding: 0;
     list-style: none;

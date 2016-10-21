@@ -1,4 +1,7 @@
-<div id="news" class="card-view"></div>
+<select id="news-year"></select>
+<!-- <select id="news-month"></select> -->
+
+<div id="news-container" class="table-view"></div>
 
 <div id="load-more">
     <button id="load-btn" class="btn btn-primary">載入更多</button>
@@ -9,28 +12,24 @@
 
     var start = 0,
         end = 30;
+    var yearBreak = [];
     var savedNews;
 
     if (getParameter("id") != undefined) {
+        $("#news-year").remove();
         fetchItem("news", bindNewsItem, getParameter("id"));
     } else {
         fetchJson("news", bindNews);
     }
 
     $("#load-btn").bind("click", function() {
-      if (start == end) {
-          return;
-      }
-      fetchJson("news", bindNews);
+        if (start == end) {
+            return;
+        }
+        fetchJson("news", bindNews);
     })
-    // $(window).bind("scroll", function() {
-    //     if (start == end) {
-    //         return;
-    //     }
-    //     if (getParameter("id") == undefined) {
-    //       fetchJson("news", bindNews);
-    //         if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
-    //         }
-    //     }
-    // });
+
+    if (getParameter("id") != undefined) {
+        $("#load-btn").remove();
+    }
 </script>

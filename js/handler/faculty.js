@@ -1,8 +1,13 @@
 function bindFaculty(data) {
     var faculty = $("#faculty");
     var other = $("#other-faculty");
+    var retire = $("#retire-faculty")
     var order = [];
     var orderView = [];
+    var orderOther = [];
+    var orderOtherView = [];
+    var orderRetire = [];
+    var orderRetireView = [];
     var memberView, imageView, detailView, table;
 
     for (i = 0, len = data.length; i < len; i += 1) {
@@ -14,7 +19,7 @@ function bindFaculty(data) {
             "class": "col-xs-12 col-md-3",
             "html": $("<img/>", {
                 "class": "img-thumbnail",
-                "src": "http://www.cs.nchu.edu.tw/v3x/faculty_photo/" + data[i].photo
+                "src": "http://www.cs.nchu.edu.tw/faculty_photo/" + data[i].photo
             })
         });
 
@@ -92,8 +97,12 @@ function bindFaculty(data) {
         if (data[i].cate == "0") {
             order[order.length] = parseInt(data[i].number, 10)
             orderView[orderView.length] = memberView;
-        } else {
-            other.append(memberView);
+        } else if (data[i].cate == "1") {
+            orderOther[orderOther.length] = parseInt(data[i].number_pt, 10);
+            orderOtherView[orderOtherView.length] = memberView;
+        } else if (data[i].cate == "2") {
+            orderRetire[orderRetire.length] = parseInt(data[i].number_retire, 10);
+            orderRetireView[orderRetireView.length] = memberView;
         }
     }
     for (i = 0, len = order.length; i < len; i++) {
@@ -109,7 +118,39 @@ function bindFaculty(data) {
         }
       }
     }
+    for (i = 0, len = orderOther.length; i < len; i++) {
+      for (j = i; j < len; j++) {
+        if (orderOther[i] > orderOther[j]) {
+          var tmp = orderOther[i];
+          orderOther[i] = orderOther[j];
+          orderOther[j] = tmp;
+
+          tmp = orderOtherView[i];
+          orderOtherView[i] = orderOtherView[j];
+          orderOtherView[j] = tmp;
+        }
+      }
+    }
+    for (i = 0, len = orderRetire.length; i < len; i++) {
+      for (j = i; j < len; j++) {
+        if (orderRetire[i] > orderRetire[j]) {
+          var tmp = orderRetire[i];
+          orderRetire[i] = orderRetire[j];
+          orderRetire[j] = tmp;
+
+          tmp = orderRetireView[i];
+          orderRetireView[i] = orderRetireView[j];
+          orderRetireView[j] = tmp;
+        }
+      }
+    }
     for (i = 0, len = orderView.length; i < len; i++) {
         faculty.append(orderView[i]);
+    }
+    for (i = 0, len = orderOtherView.length; i < len; i++) {
+        other.append(orderOtherView[i]);
+    }
+    for (i = 0, len = orderRetireView.length; i < len; i++) {
+        retire.append(orderRetireView[i]);
     }
 }

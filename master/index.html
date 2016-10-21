@@ -67,7 +67,7 @@
             top: 100px;
         }
 
-        #contact, #review {
+        #contact, #review, #faq {
           display: none;
           width: 800px;
           padding-top: 70px;
@@ -152,7 +152,7 @@
                 <ul>
                     <!-- <li><a target="_blank" href="http://www.cs.nchu.edu.tw/v3x/sshare.php">⦿ 心得分享</a></li> -->
                     <li><a href="#" onclick="showReview();">⦿ 心得分享</a></li>
-                    <li><a href="#">⦿ 常見問題</a></li>
+                    <li><a href="#" onclick="showFAQ();">⦿ 常見問題</a></li>
                     <li><a href="#" onclick="showContact()">⦿ 聯絡方式</a></li>
                 </ul>
             </div>
@@ -178,6 +178,17 @@
             <br>
             <h2>地圖</h2>
             <img src="img/nchu_location.jpg">
+          </div>
+
+          <div id="faq">
+            <a href="#" onclick="showHome();">←返回首頁</a>
+            <br>
+            <br>
+            <h1>常見問題</h1>
+            <br>
+            <pre>
+              建置中......
+            </pre>
           </div>
 
           <div id="review">
@@ -234,21 +245,32 @@
     <script>
       function showHome() {
         $("#home").fadeIn(200);
+        $("#faq").fadeOut(200);
         $("#contact").fadeOut(200);
         $("#review").fadeOut(200);
       }
 
       function showContact() {
         $("#contact").fadeIn(200);
+        $("#faq").fadeOut(200);
         $("#review").fadeOut(200);
         $("#home").fadeOut(200);
       }
 
       function showReview() {
         $("#review").fadeIn(200);
+        $("#faq").fadeOut(200);
         $("#contact").fadeOut(200);
         $("#home").fadeOut(200);
       }
+
+      function showFAQ() {
+        $("#faq").fadeIn(200);
+        $("#review").fadeOut(200);
+        $("#contact").fadeOut(200);
+        $("#home").fadeOut(200);
+      }
+
     </script>
 </body>
 

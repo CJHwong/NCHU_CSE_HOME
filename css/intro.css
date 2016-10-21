@@ -1,0 +1,19 @@
+/* Introduction */
+
+.intro {
+  padding     : 8px;
+  line-height : 2.0;
+}
+
+.intro h5 {
+  line-height : 2.0;
+}
+
+.intro ol {
+  margin-left  : 0px;
+  padding-left : 1em;
+}
+
+.intro img {
+  margin-bottom : 8px;
+}

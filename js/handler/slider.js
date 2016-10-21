@@ -5,8 +5,8 @@ function bindSlide(data) {
     var slideDots = $("#slide-dots");
     var i;
     for (i = 0; i < data.length; i += 1) {
-        slideList.append($("<li/>").append($("<img/>").attr("src", "http://www.cs.nchu.edu.tw/v3x/slider_show/" + data[i].filename)))
-        slideTitles.append($("<li/>").append($("<span/>").text(data[i].text)));
+        slideList.append($("<li/>").append($("<img/>").attr("src", "http://www.cs.nchu.edu.tw/slider_show/" + data[i].filename)))
+        slideTitles.append($("<li/>").append($("<a/>").attr("href", "#").append($("<span/>").text(data[i].text))));
         slideDots.append($("<li/>").attr("order", i));
     }
     slideList.css("width", data.length * 100 + "%");
@@ -14,10 +14,10 @@ function bindSlide(data) {
     $("#slides > li").css("width", 100 / data.length + "%");
     $("#slide-title > li").css("width", 100 / data.length + "%");
 
-
     // Start Slider Show
     var TOTAL = $("#slides > li").length;
-    var WIDTH = parseInt($("#slider-container").css("width"), 10);
+    // var WIDTH = parseInt($("#slider").css("width"), 10);
+    var WIDTH = 883;
     var currentSlide = 0;
 
     // RightLeft Slide

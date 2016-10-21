@@ -19,54 +19,92 @@
 </div>
 
 <div class="row">
-    <div class="col-md-push-4 col-xs-12 col-md-4">
+    <div class="col-md-push-4 col-xs-12 col-md-4 home-topic">
         <div class="card-view">
-            <div class="card-brand">
-                <span>最新消息</span>
-                <span class="more-link"><a href="#news">more</a></span>
+            <div class="card-brand" id="post-brand">
+                <span><i class="icon ion-star"></i>最新消息</span>
+                <span class="more-link"><a href="#news">more...</a></span>
+                <div class="triangle"></div>
             </div>
             <ul id="post-list"></ul>
         </div>
     </div>
 
-    <div class="col-md-push-4 col-xs-12 col-md-4">
+    <div class="col-md-push-4 col-xs-12 col-md-4 home-topic">
         <div class="card-view">
-            <div class="card-brand">
-                <span>近期演講</span>
-                <span class="more-link"><a href="#event">more</a></span>
+            <div class="card-brand" id="event-brand">
+                <span><i class="icon ion-mic-a"></i>近期演講</span>
+                <span class="more-link"><a href="#event">more...</a></span>
+                <div class="triangle"></div>
             </div>
             <ul id="event-list"></ul>
         </div>
     </div>
 
-    <div class="col-md-pull-8 col-xs-12 col-md-4">
+    <div class="col-md-pull-8 col-xs-12 col-md-4 home-topic">
         <div class="card-view">
-            <div class="card-brand">
-                <span>重點連結</span>
+            <div class="card-brand" id="link-brand">
+                <span><i class="icon ion-android-share-alt"></i>重點連結</span>
+                <div class="triangle"></div>
             </div>
             <ul id="link-list" class="list-group">
-                <li class="list-group-item"><a href="#studentCloud">雲端計算與服務學分學程</a></li>
                 <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="#studentCloud">雲端計算與服務學分學程</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
                     <a href="./highschool">高中生專區</a>
-                    <span class="label label-danger">HOT</span>
                 </li>
-                <li class="list-group-item"><a href="./master">碩士在職專班專區</a></li>
                 <li class="list-group-item">
-                    <a href="https://www.facebook.com/NCHU.CSESA">系學會粉絲專頁</a>
-                    <span class="label label-danger">HOT</span>
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="./master">碩士在職專班專區</a>
                 </li>
-                <li class="list-group-item"><a href="http://www.cs.nchu.edu.tw/class/status.php">教室使用情況</a></li>
-                <li class="list-group-item"><a target="_blank" href="http://network.cs.nchu.edu.tw/">網路使用疑難排解</a></li>
-                <li class="list-group-item"><a href="#studentList">實驗室新生及缺額名單</a></li>
-                <li class="list-group-item"><a href="http://www.cs.nchu.edu.tw/alumnus/">資工系友園地</a></li>
-                <li class="list-group-item"><a href="https://www.facebook.com/nchucse">資工系粉絲專頁</a></li>
-                <li class="list-group-item"><a href="https://www.facebook.com/groups/148564571852569">系友會網路社團</a></li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="https://www.facebook.com/NCHU.CSESA">系學會粉絲專頁</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="http://www.cs.nchu.edu.tw/class/status.php">教室使用情況</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a target="_blank" href="http://network.cs.nchu.edu.tw/">網路使用疑難排解</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="#studentList">實驗室新生及缺額名單</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="http://www.cs.nchu.edu.tw/alumnus/">資工系友園地</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="https://www.facebook.com/nchucse">資工系粉絲專頁</a>
+                </li>
+                <li class="list-group-item">
+                    <!-- <i class="icon ion-play"></i> -->
+                    <img class="list-icon" src="img/nar-05.png">
+                    <a href="https://www.facebook.com/groups/148564571852569">系友會網路社團</a>
+                </li>
             </ul>
         </div>
     </div>
 </div>
 
 <script>
+    $("title").text("中興資工系");
     fetchJson("slide", bindSlide);
     fetchJson("post", bindPost);
     fetchJson("event", bindEventList);

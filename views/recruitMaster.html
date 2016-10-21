@@ -1,4 +1,4 @@
-<div class="card-view">
+<div class="table-view">
     <div class="card-brand">
         <a name="master"></a>
         <span>碩士班</span>
@@ -13,27 +13,30 @@
         <tbody id="info-master">
         </tbody>
 
-        <thead>
-            <tr>
-                <th>入學考試題目</th>
-                <th>連結</th>
-            </tr>
-        </thead>
-        <tbody id="exam-master">
-        </tbody>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>入學考試題目</th>
+                    <th>連結</th>
+                </tr>
+            </thead>
+            <tbody id="exam-master">
+            </tbody>
+        </table>
+        <table class="table table-striped">
 
-        <thead>
-            <tr>
-                <th>評估推薦表</th>
-                <th>連結</th>
-            </tr>
-        </thead>
-        <tbody id="form-master">
-        </tbody>
-    </table>
+            <thead>
+                <tr>
+                    <th>評估推薦表</th>
+                    <th>連結</th>
+                </tr>
+            </thead>
+            <tbody id="form-master">
+            </tbody>
+        </table>
 </div>
 
 <script>
-    $("title").text("系所成員 |" + "中興資工系");
+    $("title").text("招生資訊 |" + "中興資工系");
     fetchJson("recruit", bindRecruit);
 </script>

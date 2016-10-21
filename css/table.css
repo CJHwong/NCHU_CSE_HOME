@@ -1,0 +1,66 @@
+/* Chairman and Faculty and Laboratory */
+
+.chairman,
+.laboratory,
+.member {
+  padding    : 24px;
+  text-align : center;
+}
+
+.chairman img,
+.laboratory img,
+.member img {
+  width     : 100%;
+  max-width : 150px;
+  height    : auto;
+}
+
+.chairman h4,
+.laboratory h4,
+.member h4 {
+  font-weight : bold;
+}
+
+.chairman table,
+.laboratory table,
+.member table {
+  width       : 100%;
+  text-align  : justify;
+  font-size   : 13px;
+  line-height : 2em;
+}
+
+.chairman table tr td:first-child,
+.laboratory table tr td:first-child,
+.member table tr td:first-child {
+  width       : 80px;
+  font-weight : bold;
+}
+
+.chairman table tr td,
+.laboratory table tr td,
+.member table tr td {
+  border-bottom : 1px dotted #ccc;
+}
+
+/* Table */
+
+thead>tr>th {
+  font-size   : 15px;
+  font-weight : bolder;
+}
+
+thead> tr> th:first-child {
+  width : 85%;
+}
+
+.table-project-bachelor {
+  width       : 40%;
+  margin-left : 30%;
+  /* width: 33%; */
+  /* display: inline-block; */
+}
+
+.table-project-bachelor td {
+  text-align : center;
+}

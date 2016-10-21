@@ -1,4 +1,4 @@
-<div id="event" class="card-view"></div>
+<div id="event-container" class="table-view"></div>
 
 <div id="load-more">
     <button id="load-btn" class="btn btn-primary">載入更多</button>
@@ -24,14 +24,7 @@
       fetchJson("event", bindEvent);
     })
 
-    // $(window).bind("scroll", function() {
-    //     if (start == end) {
-    //         return;
-    //     }
-    //     if (getParameter("id") == undefined) {
-    //         if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
-    //             fetchJson("event", bindEvent);
-    //         }
-    //     }
-    // });
+    if (getParameter("id") != undefined) {
+      $("#load-btn").remove();
+    }
 </script>

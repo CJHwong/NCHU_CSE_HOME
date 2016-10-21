@@ -12,7 +12,7 @@ function bindLab(data) {
             "class": "col-xs-12 col-md-3",
             "html": $("<img/>", {
                 "class": "img-thumbnail",
-                "src": "http://www.cs.nchu.edu.tw/v3x/laboratory_logo/" + data[i].logo
+                "src": "http://www.cs.nchu.edu.tw/laboratory_logo/" + data[i].logo
             })
         });
 

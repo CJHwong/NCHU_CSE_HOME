@@ -1,6 +1,6 @@
 function fetchItem(type, method, id) {
     "use strict";
-    var url, domain = "http://www.cs.nchu.edu.tw/v3x/json_data/";
+    var url, domain = "http://www.cs.nchu.edu.tw/json_data/";
     switch (type) {
         case "news":
             url = domain + "json_get_news_data.php?id=" + id + "&callback";
@@ -18,14 +18,14 @@ function fetchItem(type, method, id) {
             method(response);
         },
         error: function(response) {
-            console.warn(type + " item got error!");
+            console.warn(type + "item cannot retrieve data!");
         }
     });
 }
 
 function fetchJson(type, method) {
     "use strict";
-    var url, domain = "http://www.cs.nchu.edu.tw/v3x/json_data/";
+    var url, domain = "http://www.cs.nchu.edu.tw/json_data/";
     var dType;
     switch (type) {
         case "slide":
@@ -78,7 +78,7 @@ function fetchJson(type, method) {
             method(response);
         },
         error: function(response) {
-            console.warn(type + " error!");
+            console.warn(type + " cannot retrieve data!");
         }
     });
 }

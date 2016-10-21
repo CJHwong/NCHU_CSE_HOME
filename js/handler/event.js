@@ -2,7 +2,7 @@ function bindEventList(data) {
     "use strict";
     var postList = $("#event-list");
     var date;
-    var li, a, table;
+    var li, a, table, icon, div;
     var i, len;
     for (i = data.length - 1, len = data.length; i > len - 4; i -= 1) {
         date = data[i].post_date.split(" ");
@@ -33,11 +33,17 @@ function bindEventList(data) {
                     "text": data[i].place
                 })));
 
-        li = $("<li/>");
-        li
-            .addClass("event")
+        div = $("<div>")
             .append(a)
             .append(table);
+
+        // icon = $("<i class='icon ion-play'>");
+        icon = $("<img class='list-icon' src='img/nar2-05.png'>");
+
+        li = $("<li/>")
+            .addClass("event")
+            .append(icon)
+            .append(div);
         postList.append(li);
     }
 };
@@ -47,7 +53,7 @@ function bindEvent(data) {
     var currentM = -1;
     var date;
     var monthKey = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-    var news = $("#event");
+    var news = $("#event-container");
     var ul, li, a, span, context, div;
     var i, len;
     ul = $("<ul/>", {
@@ -55,9 +61,9 @@ function bindEvent(data) {
     });
 
     if (savedEvent == undefined) {
-      savedEvent = data;
+        savedEvent = data;
     } else {
-      data = savedEvent;
+        data = savedEvent;
     }
 
     for (i = data.length - 1 - start, len = data.length - 1 - end; i > len; i -= 1) {
@@ -67,7 +73,7 @@ function bindEvent(data) {
         });
 
         span = $("<span/>", {
-            "text": data[i].post_date.split(" ")[0]
+            "text": data[i].post_date
         });
 
         context = $("<pre>").text("講者：" + data[i].speaker + "\n地點：" + data[i].place);
@@ -101,17 +107,18 @@ function bindEvent(data) {
     }
     news.append(ul);
 
-    start = start + end;
-    end = end + end;
+    start = end;
+    end = end + 10;
     if (end >= data.length) {
         start = end;
+        end = start;
     }
 };
 
 function bindEventItem(data) {
     "use strict";
     data = data[0];
-    var news = $("#event");
+    var news = $("#event-container");
     var ul, li, a, context, div;
     var i, len;
 

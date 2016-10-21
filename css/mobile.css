@@ -1,0 +1,116 @@
+/* Mobile */
+
+@media (max-width: 376px) {
+  header {
+    height: auto;
+  }
+  .banner-cse {
+    padding: 0;
+  }
+  .banner-cse img {
+    width  : 100%;
+    height : auto;
+  }
+
+  #navbar-cse {
+    /*width : 100%;*/
+    float : none;
+  }
+
+  #navbar-cse ul li {
+    height : 100%;
+  }
+
+  #navbar-cse ul li a {
+    color      : grey;
+    text-align : center;
+  }
+
+  .navbar .nav >li {
+    display : block;
+    width   : 100%;
+  }
+
+  .dropdown-menu li a {
+    color      : grey!important;
+    text-align : center;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display : none;
+  }
+
+  .open>.dropdown-menu {
+    display : block!important;
+  }
+
+  .container {
+    width : 100%!important;
+  }
+
+  footer {
+    width : 100%!important;
+  }
+}
+
+@media (min-width: 376px)
+       and (max-width : 1024px) {
+  .banner-cse img {
+    width  : 100%;
+    height : auto;
+  }
+
+  #navbar-cse {
+    width : 100%;
+    float : none;
+  }
+
+  .container {
+    width : 100%!important;
+  }
+
+  footer {
+    width : 100%!important;
+  }
+}
+
+@media (min-width: 376px) {
+  .red {
+    background : none repeat scroll 0 0 #e60012;
+    /* border-bottom : 2px solid #e06f58; */
+  }
+
+  .orange {
+    background : none repeat scroll 0 0 #eb5c29;
+    /* border-bottom : 2px solid #e5b962; */
+  }
+
+  .yellow {
+    background : none repeat scroll 0 0 #eebc2b;
+    /* border-bottom : 2px solid #f4d075; */
+  }
+
+  .green {
+    background : none repeat scroll 0 0 #07913a;
+    /* border-bottom : 2px solid #8fc980; */
+  }
+
+  .blue {
+    background : none repeat scroll 0 0 #0e6eb8;
+    /* border-bottom : 2px solid #8bced0; */
+  }
+
+  .purple {
+    background : none repeat scroll 0 0 #a40a5e;
+    /* border-bottom : 2px solid #c298c4; */
+  }
+
+  .pink {
+    background : none repeat scroll 0 0 #e61874;
+  }
+
+  .grey {
+    background : none repeat scroll 0 0 #f3f2f5;
+    /* border-bottom : 2px solid #e5e1e1; */
+  }
+}

@@ -11,11 +11,15 @@
         }
 
         body {
-            padding-left: calc(50% - 512px);
+            margin: 0;
+            padding-left: 50%;
+            margin-left: -512px;
+            background-color: #36b081;
         }
 
         .header {
             width: 1024px;
+            background-color: white;
         }
 
         .header .logo {
@@ -28,12 +32,13 @@
 
         .content {
             width: 1024px;
+            background-color: white;
         }
 
         #home {
             background-image: url("img/bg.png");
             background-size: cover;
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.png', sizingMethod='scale');
+            filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.png', sizingMethod='scale');
             -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.png', sizingMethod='scale')";
             width: 1024px;
             height: 646px;
@@ -42,7 +47,8 @@
         .menu {
             position: absolute;
             height: 646px;
-            left: calc(50% - 512px + 690px);
+            left: 50%;
+            margin-left: 178px;
         }
 
         .menu ul {
@@ -66,19 +72,47 @@
             text-shadow: 2px 2px 3px black;
         }
 
-        #entrance {
+        #entrance,
+        #learn,
+        #future,
+        #faq {
             width: 1024px;
             display: none;
-            /*padding-top: 24px;*/
             padding: 24px;
         }
 
         #entrance span {
-          font-size: 18px;
-          margin-bottom: 8px;
+            font-size: 18px;
+            margin-bottom: 8px;
         }
-        #entrance a {
-          margin: 16px;
+
+        .back-home {
+            margin: 30px;
+        }
+
+        #learn p {
+            width: 95%;
+            line-height: 24px;
+            white-space: pre-wrap;
+        }
+
+        .hardware {
+            min-height: 450px
+        }
+
+        .hardware-descr {
+            width: 40%;
+            float: left;
+            display: inline-block
+        }
+
+        .hardware-img {
+            width: 49%;
+        }
+
+        * a {
+            color: black;
+            text-decoration: none;
         }
 
         footer {
@@ -88,6 +122,8 @@
         }
 
         footer p {
+            margin: 0;
+            padding: 8px;
             font-size: 14px;
             font-weight: bold;
             text-align: center;
@@ -119,15 +155,17 @@
             <div class="menu">
                 <ul>
                     <li><a href="#" onclick="showEntrance();">01.入學管道</a></li>
-                    <li><a href="#">02.學習資源</a></li>
-                    <li><a href="#">03.未來發展</a></li>
-                    <li><a href="#">04.常見問題</a></li>
+                    <li><a href="#" onclick="showLearn();">02.學習資源</a></li>
+                    <li><a href="#" onclick="showFuture();">03.未來發展</a></li>
+                    <li><a href="#" onclick="showFAQ();">04.常見問題</a></li>
                 </ul>
             </div>
         </div>
 
         <div id="entrance">
-            <a href="#" onclick="showHome();">←返回首頁</a>
+            <a class="back-home" href="#" onclick="showHome();">←返回首頁</a>
+            <h3>入學管道</h3>
+            <br><br>
             <div>
                 <p>
                     <br>
@@ -164,6 +202,98 @@
                 </p>
             </div>
         </div>
+
+        <div id="learn">
+            <a class="back-home" href="#" onclick="showHome();">←返回首頁</a>
+            <h3>學習資源</h3>
+            <div>
+                <p>
+                    <h4>一、821個人電腦教室</h4>
+                    <h4>[簡介]</h4>
+                    <p>本實驗室之設立，用以提供學生上機實作之環境，以期藉由實習達到與課程相輔相成之目的，提升學生的實務能力與經驗，幫助了解課程內容，增進師生之教學互動。於教學資源設置上，備有60多部個人電腦、高速光纖網路、擴音機、教學廣播系統及投影機等設備，以提供優良的教學品質與舒適的學習環境。</p>
+                    <div class="hardware">
+                        <div class="hardware-descr">
+                            <h4>[硬體設備]</h4>
+                            <p>高階個人電腦69台</p>
+                            <p>彩色液晶螢幕69台</p>
+                            <p>伺服器2台</p>
+                            <p>教學廣播系統-教學主機1台</p>
+                            <p>UTP外接式影像廣播子機33台</p>
+                            <p>投影機1台</p>
+                        </div>
+                        <img class="hardware-img" src="img/image00.jpg" alt="">
+                    </div>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <h4>二、雲端運算實驗室</h4>
+                    <h4>[簡介]</h4>
+                    <p>本實驗室設立的主要目的，是為配合雲端運算及Arduino 相關課程的教學與實作，提供本系學生一個可以實習演練的實驗環境，藉由實作的過程提昇學生的實務經驗與能力，達到理論與實作合一的教學目標。為求優良的教學品質與舒適的學習環境，除了投影機與擴音設備等基礎設施外，本實驗室直接與機房雲端運算機櫃連線，更配備了豐富的軟硬體設備，簡述如下：
+                    </p>
+                    <div class="hardware">
+                        <div class="hardware-descr">
+                            <h4>[硬體設備]</h4>
+                            <p>高階個人電腦43台</p>
+                            <p>高速網路交換器</p>
+                        </div>
+                        <img class="hardware-img" src="img/image02.jpg" alt="">
+                    </div>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <h4>三、電子電路與邏輯實驗室</h4>
+                    <h4>[簡介]</h4>
+                    <p>本實驗室設立的主要目的，是為配合電子電路與邏輯設計的課程理論，提供本系學生一個安全而且可以動手操作的實驗環境，藉由實作的過程提昇學生的實務經驗與能力，達到理論與實作合一的教學目標。為求優良的教學品質與舒適的學習環境，除了廣播系統及投影機設備外，本實驗室更配備了豐富的軟硬體設備，簡述如下：</p>
+                    <div class="hardware">
+                        <div class="hardware-descr">
+                            <h4>[硬體設備]</h4>
+                            <p>個人電腦</p>
+                            <p>數位IC測試器</p>
+                            <p>基礎邏輯電路實習器</p>
+                            <p>光標讀出示波器</p>
+                            <p>CPLD實驗套組</p>
+                            <p>標準數位IC</p>
+                            <p>電源供應器</p>
+                            <p>擴大機</p>
+                            <p>投影機</p>
+                        </div>
+                        <img class="hardware-img" src="img/image01.jpg" alt="">
+                    </div>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <h4>四、學生自習教室</h4>
+                    <h4>[簡介]</h4>
+                    <p>學生自習教室共設有18台個人主機，其寬敞便利的空間及齊全的設備，提供學生優良的自習環境。</p>
+                    <div class="hardware">
+                        <div class="hardware-descr">
+                        </div>
+                        <img class="hardware-img" src="img/image03.jpg" alt="">
+                    </div>
+                </p>
+            </div>
+        </div>
+
+        <div id="future">
+            <a class="back-home" href="#" onclick="showHome();">←返回首頁</a>
+            <h3>未來發展</h3>
+            <br><br>
+            <pre>建置中...</pre>
+        </div>
+
+        <div id="faq">
+            <a class="back-home" href="#" onclick="showHome();">←返回首頁</a>
+            <h3>常見問題</h3>
+            <br><br>
+            <pre>建置中...</pre>
+        </div>
+
     </div>
 
     <footer>
@@ -177,10 +307,40 @@
         function showHome() {
             $("#home").fadeIn(200);
             $("#entrance").fadeOut(200);
+            $("#learn").fadeOut(200);
+            $("#faq").fadeOut(200);
+            $("#future").fadeOut(200);
         }
 
         function showEntrance() {
             $("#entrance").fadeIn(200);
+            $("#learn").fadeOut(200);
+            $("#home").fadeOut(200);
+            $("#faq").fadeOut(200);
+            $("#future").fadeOut(200);
+        }
+
+        function showLearn() {
+            $("#learn").fadeIn(200);
+            $("#entrance").fadeOut(200);
+            $("#home").fadeOut(200);
+            $("#faq").fadeOut(200);
+            $("#future").fadeOut(200);
+        }
+
+        function showFuture() {
+            $("#future").fadeIn(200);
+            $("#learn").fadeOut(200);
+            $("#faq").fadeOut(200);
+            $("#entrance").fadeOut(200);
+            $("#home").fadeOut(200);
+        }
+
+        function showFAQ() {
+            $("#faq").fadeIn(200);
+            $("#learn").fadeOut(200);
+            $("#future").fadeOut(200);
+            $("#entrance").fadeOut(200);
             $("#home").fadeOut(200);
         }
     </script>
