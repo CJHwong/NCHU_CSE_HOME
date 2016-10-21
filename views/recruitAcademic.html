@@ -1,0 +1,40 @@
+<div class="card-view">
+    <div class="card-brand">
+        <a name="doctor"></a>
+        <span>博士班</span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>入學相關資訊</th>
+                <th>連結</th>
+            </tr>
+        </thead>
+        <tbody id="info-doctor">
+        </tbody>
+
+        <thead>
+            <tr>
+                <th>入學考試題目</th>
+                <th>連結</th>
+            </tr>
+        </thead>
+        <tbody id="exam-doctor">
+        </tbody>
+
+        <thead>
+            <tr>
+                <th>評估推薦表</th>
+                <th>連結</th>
+            </tr>
+        </thead>
+        <tbody id="form-doctor">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $("title").text("系所成員 |" + "中興資工系");
+    fetchJson("recruit", bindRecruit);
+</script>

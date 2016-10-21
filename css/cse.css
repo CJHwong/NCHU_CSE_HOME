@@ -1,0 +1,361 @@
+/* General */
+
+* {
+    font-family: Arial, '文泉驛微米黑', 'WenQuanYi Micro Hei', '黑體-繁', 'Heiti TC', '儷黑 Pro', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', '標楷體', DFKai-SB, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+body {
+    /*background: none repeat scroll 0 0 #e6e2dd;*/
+    background: none repeat scroll 0 0 #87ceeb;
+}
+body, html, .container {
+    padding: 0;
+}
+thead> tr> th:first-child {
+    width: 85%;
+}
+
+/* Header */
+
+header {
+    margin: 0 !important;
+    background-color: #87ceeb;
+}
+.logo-cse {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+}
+.brand-cse {
+    margin-left: 24px;
+    color: white;
+    text-shadow: 0 1px 1px black;
+    display: inline-block;
+}
+.brand-cse h3 {
+    font-weight: bold !important;
+    line-height: 32  px;
+    letter-spacing: 4px;
+}
+.brand-cse h5 {
+    font-weight: bold !important;
+    padding-left: 24px;
+}
+.nav-nchu {
+    font-size: 13px;
+    height: 73px;
+    color: white;
+}
+.nav-nchu span {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+}
+.nav-nchu span a {
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+}
+
+/* Navbar */
+
+@media (min-width: 750px) {
+    #navbar-cse {
+        letter-spacing: .2em;
+    }
+    .navbar {
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+    }
+    .navbar-collapse {
+        padding: 0;
+    }
+    .navbar .nav {
+        font-size: 16px;
+        font-weight: bold;
+        display: table;
+        width: 100%;
+        margin: 0;
+    }
+    .navbar .nav> li {
+        display: table-cell;
+        float: none;
+        width: 14.28%;
+        height: 100%;
+        text-align: center;
+    }
+    .navbar .nav> li a {
+        color: #ffede5;
+    }
+    .navbar .nav> li a:hover {
+        color: white;
+    }
+    .navbar .nav> li> ul {
+        width: 100%;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .dropdown-menu li a:hover {
+        background-color: inherit;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+  .brand-cse h3 span {
+    display: block;
+  }
+  .brand-cse h5 {
+    padding: 0px;
+  }
+  .container {
+      width: 100%!important;
+  }
+  footer {
+      width: 100%!important;
+  }
+}
+
+/* General Contents */
+
+.to-top {
+    line-height: 50px;
+    position: fixed;
+    z-index: 10000;
+    top: 160px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    opacity: .6;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #eee;
+}
+.container {
+    width: 1024px;
+    background: none repeat scroll 0 0 white;
+}
+.panel {
+    margin: 8px 0 8px 0;
+    padding: 8px;
+    border: 0;
+    box-shadow: 0 0 0 black;
+}
+.alert {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.card-view {
+    margin: 8px 0 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+}
+.card-brand {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 5px 12px 5px 12px;
+    letter-spacing: .4em;
+    color: #777;
+    border-bottom: 1px dotted #ccc;
+    background-color: white;
+}
+.more-link {
+    font-size: 13px;
+    float: right;
+    letter-spacing: normal;
+}
+.more-link a {
+    color: #777;
+}
+.more-link a:hover {
+    text-decoration: none;
+}
+.file-menu {
+    height: 250px;
+    overflow: auto;
+}
+
+/* Link */
+
+#link-list {
+    list-style: none;
+}
+#link-list li {
+    padding: 11px;
+    border: 0 dotted grey;
+}
+#link-list li a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #d44950;
+    text-decoration-style: dotted;
+}
+#link-list li a:hover {
+    text-decoration-style: solid;
+}
+#link-list li span {
+    float: right;
+}
+
+/* News */
+
+#post-list {
+    width: 100%;
+    padding: 0 8px 0 8px;
+    list-style: none;
+}
+#post-list .post {
+    line-height: 16px;
+    height: 60px;
+    margin-top: 6px;
+}
+#post-list .post span {
+    font-size: 11px;
+    font-weight: 600;
+    display: block;
+    color: #d44950;
+}
+#post-list .post a {
+    font-size: 14px;
+    display: block;
+    letter-spacing: 1.8px;
+    color: #222;
+}
+
+/* Events */
+
+#event-list {
+    width: 100%;
+    padding: 0 12px 12px 12px;
+    list-style: none;
+}
+#event-list .event {
+    margin-bottom: 10px;
+}
+#event-list .event a {
+    font-weight: bold;
+    display: block;
+    color: #d44950;
+}
+#event-list .event td:first-child {
+    width: 42px;
+}
+
+/* Introduction */
+
+.intro {
+    line-height: 2.0;
+    padding: 8px;
+}
+.intro h5 {
+    line-height: 2.0;
+}
+.intro ol {
+    margin-left: 0px;
+    padding-left: 1em;
+}
+.intro img {
+    margin-bottom: 8px;
+}
+
+/* Chairman and Faculty and Laboratory */
+
+.chairman, .member, .laboratory {
+    padding: 24px;
+    text-align: center;
+}
+.chairman img, .member img, .laboratory img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+.chairman h4, .member h4, .laboratory h4 {
+    font-weight: bold;
+}
+.chairman table, .member table, .laboratory table {
+    font-size: 13px;
+    line-height: 2em;
+    width: 100%;
+    text-align: justify;
+}
+.chairman table tr td:first-child, .member table tr td:first-child, .laboratory table tr td:first-child {
+    font-weight: bold;
+    width: 80px;
+}
+.chairman table tr td, .member table tr td, .laboratory table tr td {
+    border-bottom: 1px dotted #ccc;
+}
+
+/* Table */
+.table-project-bachelor {
+  /*width: 33%;*/
+  /*display: inline-block;*/
+  width: 40%;
+  margin-left: 30%;
+}
+
+.table-project-bachelor td {
+  text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    width: 1024px;
+    padding: 15px;
+    background-color: #608341;
+}
+footer p {
+    font-size: 13px;
+    /*font-style: italic;*/
+    line-height: 2em;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+}
+footer p a {
+    color: white;
+}
+
+/* Variables */
+
+@media (min-width: 750px) {
+    .red {
+        background: none repeat scroll 0 0 #c61931;
+    }
+    .orange {
+        background: none repeat scroll 0 0 #ffa500;
+    }
+    .yellow {
+        background: none repeat scroll 0 0 #ffb300;
+    }
+    .green {
+        background: none repeat scroll 0 0 #008375;
+    }
+    .blue {
+        background: none repeat scroll 0 0 #3068f2;
+    }
+    .purple {
+        background: none repeat scroll 0 0 #71456c;
+    }
+    .pink {
+        background: none repeat scroll 0 0 #fd4f57;
+    }
+}

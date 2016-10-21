@@ -1,0 +1,24 @@
+<div class="card-view">
+    <div class="card-brand">
+        <span>表格文件及相關辦法</span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>教師專用</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="doc-staff">
+        </tbody>
+
+    </table>
+</div>
+
+<script>
+    $("title").text("表格文件 |" + "中興資工系");
+    fetchJson("document", bindDocument);
+</script>

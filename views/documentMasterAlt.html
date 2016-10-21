@@ -1,0 +1,63 @@
+<div class="card-view">
+    <div class="card-brand">
+        <span>表格文件及相關辦法 - 碩士班及在職專班適用</span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>相關辦法</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="rule-master-alt">
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>表格下載</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="doc-master-alt">
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>表格下載 - 論文考試相關業務申請書</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="doc-exam-master-alt">
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>表格下載 - 獎學金申請表</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="doc-award-master-alt">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $("title").text("表格文件 |" + "中興資工系");
+    fetchJson("rule", bindDocument);
+    fetchJson("document", bindDocument);
+</script>

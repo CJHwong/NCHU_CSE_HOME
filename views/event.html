@@ -1,0 +1,37 @@
+<div id="event" class="card-view"></div>
+
+<div id="load-more">
+    <button id="load-btn" class="btn btn-primary">載入更多</button>
+</div>
+
+<script>
+    $("title").text("演講公告 |" + "中興資工系");
+
+    var start = 0,
+        end = 9;
+    var savedEvent;
+
+    if (getParameter("id") != undefined) {
+        fetchItem("event", bindEventItem, getParameter("id"));
+    } else {
+        fetchJson("event", bindEvent);
+    }
+
+    $("#load-btn").bind("click", function() {
+      if (start == end) {
+          return;
+      }
+      fetchJson("event", bindEvent);
+    })
+
+    // $(window).bind("scroll", function() {
+    //     if (start == end) {
+    //         return;
+    //     }
+    //     if (getParameter("id") == undefined) {
+    //         if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
+    //             fetchJson("event", bindEvent);
+    //         }
+    //     }
+    // });
+</script>

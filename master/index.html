@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>碩士在職專班專區 | 中興資工系</title>
+    <link type="image/ico" rel="icon" href="img/favicon.ico">
+    <style>
+        * {
+            font-family: Arial, '文泉驛微米黑', 'WenQuanYi Micro Hei', '黑體-繁', 'Heiti TC', '儷黑 Pro', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', '標楷體', DFKai-SB, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 1024px;
+            margin-left: calc(50% - 512px);
+        }
+
+        .content {
+          width: 800px;
+        }
+
+        #home {
+            background-image: url("img/bg.png");
+            background-size: 800px;
+            width: 800px;
+            height: 772px;
+        }
+
+        .menu-1 ul,
+        .menu-2 ul {
+            list-style: none;
+        }
+
+        .menu-1 ul a,
+        .menu-2 ul a {
+            color: white;
+            font-size: 24px;
+            letter-spacing: 3px;
+            line-height: 60px;
+            text-decoration: none;
+        }
+
+        .menu-1 ul a:hover,
+        .menu-2 ul a:hover {
+            color: grey;
+        }
+
+        .menu-1 {
+            position: absolute;
+            height: 772px;
+            left: calc(50% - 512px + 130px);
+        }
+
+        .menu-1 ul {
+            position: relative;
+            top: 420px;
+        }
+        .menu-2 {
+            position: absolute;
+            height: 772px;
+            left: calc(50% - 512px + 470px);
+        }
+
+        .menu-2 ul {
+            position: relative;
+            top: 100px;
+        }
+
+        #contact, #review {
+          display: none;
+          width: 800px;
+          padding-top: 70px;
+          padding-left: 70px;
+        }
+
+        #contact img {
+          width: 100%;
+          height: 100%;
+        }
+
+        #review table {
+          width: 80%;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+
+        #review table tr td {
+          padding-top: 12px;
+          padding-bottom: : 12px;
+        }
+
+        #review table tr td:nth-child(2) {
+          width: 10%;
+        }
+
+        .header {
+            flex: 1;
+            width: 400px;
+            height: 772px;
+        }
+
+        .header * {
+            margin-left: 100px;
+        }
+
+        .header img {
+            width: 200px;
+            margin-top: 150px;
+        }
+
+        .header p {
+            font-size: 38px;
+        }
+
+        .header span p {
+            margin-top: -50px;
+            font-size: 24px;
+            width: 24px;
+            margin-left: 108px;
+        }
+
+        footer p {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+
+    <!--[if lt IE 10]>
+     <style>
+     .container {
+       margin-left: 0;
+     }
+     .menu-1 {
+         left: 130px;
+     }
+     .menu-2 {
+         left: 470px;
+     }
+
+     </style>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+          <div id="home">
+            <div class="menu-1">
+                <ul>
+                    <!-- <li><a target="_blank" href="http://www.cs.nchu.edu.tw/v3x/sshare.php">⦿ 心得分享</a></li> -->
+                    <li><a href="#" onclick="showReview();">⦿ 心得分享</a></li>
+                    <li><a href="#">⦿ 常見問題</a></li>
+                    <li><a href="#" onclick="showContact()">⦿ 聯絡方式</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-2">
+                <ul>
+                    <li><a target="_blank" href="http://recruit.nchu.edu.tw/grade-exam/job/index-job.aspx?examc=C">⦿ 入學資訊</a></li>
+                    <li><a target="_blank" href="http://www.cs.nchu.edu.tw/~newwebtest/#studentMasterAlt">⦿ 課程資訊</a></li>
+                    <li><a target="_blank" href="http://www.cs.nchu.edu.tw/~newwebtest/#documentMasterAlt">⦿ 相關辦法</a></li>
+                </ul>
+            </div>
+          </div>
+
+          <div id="contact">
+            <a href="#" onclick="showHome();">←返回首頁</a>
+            <br>
+            <h1>聯絡方式</h1>
+            <br>
+            <h2>資工系辦公室</h2>
+            <p>地址：402 台中市南區興大路145號 資訊科學與工程學系</p>
+            <p>電話：886-4- 22840497</p>
+            <p>傳真：886-4- 22853869</p>
+            <br>
+            <h2>地圖</h2>
+            <img src="img/nchu_location.jpg">
+          </div>
+
+          <div id="review">
+            <a href="#" onclick="showHome();">←返回首頁</a>
+            <br>
+            <br>
+            <h1>學生心得分享</h1>
+            <br>
+            <table>
+              <tbody>
+                <tr>
+                  <td>碩士在職專班學習心得-蕭德仁</td>
+                  <td><a href="http://www.cs.nchu.edu.tw/sshare/160516_S.pdf">下載</a></td>
+                </tr>
+
+                <tr>
+                  <td>碩士在職專班學習心得-陳宜岑</td>
+                  <td><a href="http://www.cs.nchu.edu.tw/sshare/160516_S.pdf">下載</a></td>
+                </tr>
+
+                <tr>
+                  <td>碩士在職專班學習心得-李仙元</td>
+                  <td><a href="http://www.cs.nchu.edu.tw/sshare/160516_L.pdf">下載</a></td>
+                </tr>
+
+                <tr>
+                  <td>洪夢韓赴國外研修心得分享</td>
+                  <td><a href="http://www.cs.nchu.edu.tw/sshare/7_n1vn.pdf">下載</a></td>
+                </tr>
+
+                <tr>
+                  <td>曾筱芸赴國外研修心得分享</td>
+                  <td><a href="http://www.cs.nchu.edu.tw/sshare/1_y0wv.pdf">下載</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="header">
+            <img src="img/cse_big.png" alt="">
+            <p>中.興.資.工</p>
+            <span><p>碩士在職專班</p></span>
+        </div>
+    </div>
+
+    <footer>
+        <p>國立中興大學資訊科學與工程學系</p>
+        <p>地址：402 台中市南區興大路 145 號 - 理學大樓 8 樓 電話：(04)22840497、(04)22840498</p>
+        <p>Copyright © National Chung Hsing University</p>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      function showHome() {
+        $("#home").fadeIn(200);
+        $("#contact").fadeOut(200);
+        $("#review").fadeOut(200);
+      }
+
+      function showContact() {
+        $("#contact").fadeIn(200);
+        $("#review").fadeOut(200);
+        $("#home").fadeOut(200);
+      }
+
+      function showReview() {
+        $("#review").fadeIn(200);
+        $("#contact").fadeOut(200);
+        $("#home").fadeOut(200);
+      }
+    </script>
+</body>
+
+</html>

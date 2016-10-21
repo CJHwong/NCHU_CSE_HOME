@@ -1,0 +1,60 @@
+.news-list, .event-list {
+    padding: 0;
+    list-style: none;
+}
+.news-list div, .event-list div {
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 2px black;
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    padding: 8px;
+    margin-top: 24px;
+}
+.news-list li pre, .event-list li pre {
+    width: 100%;
+    padding: 4px;
+    border-radius: 0;
+    border-color: #EEE;
+    background-color: white;
+    text-align: left;
+    white-space: pre-wrap;
+}
+.news-list li a, .event-list li a {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+.news-list li span, .event-list li span {
+    font-weight: 600;
+    /*position: absolute;
+    right: 8px;*/
+    color: #008375;
+}
+.news-text {
+    font-size: 14px;
+    font-weight: normal !important;
+    position: static !important;
+    display: none;
+    width: 100%;
+    /*margin-left: 24px;*/
+    margin-top: 8px;
+    padding: 0 24px 0 24px;
+    color: #222 !important;
+}
+.news-list .file-link, .event-list .file-link {
+    color: red;
+}
+
+#load-more {
+  padding: 8px;
+  width: 100%;
+}
+
+#load-more button {
+  position: relative;
+  width: 40%;
+  left: 30%;
+}

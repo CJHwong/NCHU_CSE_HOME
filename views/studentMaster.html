@@ -1,0 +1,64 @@
+<div class="card-view">
+    <div class="card-brand">
+        <span>碩士班</span>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+        <span>
+      <ul>
+        <li>每位碩士生入學時於十月十五日前商請指導教授並且填送指導教授同意書及指導教授通知書。</li>
+        <li>未於新生座談會領取新生資料袋者(含有email設定及修課等相關資訊)，請務必至系辦公室領取。</li>
+        <li>系務重要訊息皆透過資工系email或系辦公室公佈欄及資工系網頁新聞區公佈，請定期收信及看公告。</li>
+        <li>系務相關問題請洽詢系辦公室陳秀蘭小姐、陳丹尼小姐或陳靖怡小姐。(電話04-22840497轉分機801或822或815)</li>
+      </ul>
+    </span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>課程資訊</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>碩士班課程地圖</td>
+                <td><a href="data/碩士班課程地圖.pdf">下載</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>修業規定</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="rule-master"></tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>畢業條件明細</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="graduate-master"></tbody>
+    </table>
+</div>
+
+<script>
+    $("title").text("學生事務 |" + "中興資工系");
+    fetchJson("document", bindStudent);
+</script>

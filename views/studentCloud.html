@@ -1,0 +1,61 @@
+<div class="card-view">
+    <div class="card-brand">
+        <span>雲端計算與服務學分學程</span>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        <span>
+      <ul>
+        <li>凡擬修學程者，須於規定期間內提出申請。</li>
+        <li>學生於修畢該學程規定修習之全部課程且成績及格獲得應修之學分數後，始可填表申請證明書。</li>
+      </ul>
+    </span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>檔案名稱</th>
+                <th>PDF</th>
+                <th>DOC</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+            <tr>
+                <td>學程課程規劃表</td>
+                <td><a href="http://www.nchu.edu.tw/~class/bulletin/credits/g/cloud.pdf">下載</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>R-11國立中興大學學生修習學程申請表</td>
+                <td></td>
+                <td><a href="http://www.nchu.edu.tw/~regist/download/download/R-011.doc">下載</a></td>
+            </tr>
+            <tr>
+                <td>R-12國立中興大學『學程證明書』申請表</td>
+                <td></td>
+                <td><a href="http://www.nchu.edu.tw/~regist/download/download/R-012.doc">下載</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <div class="row">
+  <div class="col-xs-12 col-md-12">
+    <div class="card-view">
+      <div class="card-brand">
+        <span>課程資訊</span>
+      </div>
+      <ul class="file-menu list-group">
+        <li class="list-group-item"><a href="http://www.nchu.edu.tw/~class/bulletin/credits/g/cloud.pdf">學程課程規劃表</a></li>
+        <li class="list-group-item"><a href="http://www.nchu.edu.tw/~regist/download/download/R-011.doc">R-11國立中興大學學生修習學程申請表</a></li>
+        <li class="list-group-item"><a href="http://www.nchu.edu.tw/~regist/download/download/R-012.doc">R-12國 立 中 興 大 學 『學 程 證 明 書』申 請 表</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+<script>
+    $("title").text("學生事務 |" + "中興資工系");
+    fetchJson("document", bindStudent);
+</script>

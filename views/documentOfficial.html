@@ -1,0 +1,24 @@
+<div class="card-view">
+    <div class="card-brand">
+        <span>表格文件及相關辦法</span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>系務相關辦法</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="rule-official">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $("title").text("表格文件 |" + "中興資工系");
+    fetchJson("rule", bindDocument);
+    fetchJson("document", bindDocument);
+</script>

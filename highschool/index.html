@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>高中生專區 | 中興資工系</title>
+    <link type="image/ico" rel="icon" href="img/favicon.ico">
+    <style>
+        * {
+            font-family: Arial, '文泉驛微米黑', 'WenQuanYi Micro Hei', '黑體-繁', 'Heiti TC', '儷黑 Pro', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', '標楷體', DFKai-SB, sans-serif;
+        }
+
+        body {
+            padding-left: calc(50% - 512px);
+        }
+
+        .header {
+            width: 1024px;
+        }
+
+        .header .logo {
+            width: 100px;
+        }
+
+        .header .banner {
+            width: 450px;
+        }
+
+        .content {
+            width: 1024px;
+        }
+
+        #home {
+            background-image: url("img/bg.png");
+            background-size: cover;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.png', sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.png', sizingMethod='scale')";
+            width: 1024px;
+            height: 646px;
+        }
+
+        .menu {
+            position: absolute;
+            height: 646px;
+            left: calc(50% - 512px + 690px);
+        }
+
+        .menu ul {
+            position: relative;
+            top: 120px;
+            list-style: none;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 3px white;
+            letter-spacing: 2px;
+            line-height: 80px;
+        }
+
+        .menu ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu ul a:hover {
+            color: white;
+            text-shadow: 2px 2px 3px black;
+        }
+
+        #entrance {
+            width: 1024px;
+            display: none;
+            /*padding-top: 24px;*/
+            padding: 24px;
+        }
+
+        #entrance span {
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
+        #entrance a {
+          margin: 16px;
+        }
+
+        footer {
+            width: 1024px;
+            background-color: #36b081;
+            background-image: linear-gradient(white, #36b081);
+        }
+
+        footer p {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+    <!--[if lt IE 10]>
+   <style>
+   body {
+     padding-left: 0px;
+   }
+   .content .menu {
+     position: absolute;
+     height: 646px;
+     left: 690px;
+   }
+   </style>
+  <![endif]-->
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="img/cse.png" alt="">
+        <img class="banner" src="img/banner.png" alt="">
+    </header>
+
+    <div class="content">
+        <div id="home">
+            <div class="menu">
+                <ul>
+                    <li><a href="#" onclick="showEntrance();">01.入學管道</a></li>
+                    <li><a href="#">02.學習資源</a></li>
+                    <li><a href="#">03.未來發展</a></li>
+                    <li><a href="#">04.常見問題</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="entrance">
+            <a href="#" onclick="showHome();">←返回首頁</a>
+            <div>
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/CEEC/index-CEEC.aspx?examc=N">1. 考試入學分發</a>
+                </p>
+
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/CAAC/index-CAAC.aspx?examc=L">2. 大學個人申請</a>
+                </p>
+
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/star/index-star.aspx?examc=M">3. 大學繁星推薦</a>
+                </p>
+
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/special/index-special.aspx?examc=V">4. 大學特殊選才</a>
+                </p>
+
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/overseas/index-overseas.aspx?examc=Q">5. 海外僑生(含研究所)</a>
+                </p>
+
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/skill/index-skill.aspx?examc=R">6. 四技二專甄選暨技優入學</a>
+                </p>
+                <p>
+                    <br>
+                    <a href="http://recruit.nchu.edu.tw/college-exam/transfer/index-transfer.aspx?examc=K">7. 轉學招生</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>國立中興大學資訊科學與工程學系</p>
+        <p>地址：402 台中市南區興大路 145 號 - 理學大樓 8 樓 電話：(04)22840497、(04)22840498</p>
+        <p>Copyright © National Chung Hsing University</p>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        function showHome() {
+            $("#home").fadeIn(200);
+            $("#entrance").fadeOut(200);
+        }
+
+        function showEntrance() {
+            $("#entrance").fadeIn(200);
+            $("#home").fadeOut(200);
+        }
+    </script>
+</body>
+
+</html>

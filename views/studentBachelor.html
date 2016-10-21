@@ -1,0 +1,69 @@
+<div class="card-view">
+    <div class="card-brand">
+        <span>大學部</span>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        <span>新生、轉學生與轉系生抵免學分之申請，應於入學、轉學、轉系該學期「課程加退選」期限前辦理完畢。</span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>課程資訊</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>大學部課程地圖</td>
+                <td><a href="data/大學部課程地圖.pdf">下載</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>必選修課程架構圖</td>
+                <td><a href="http://www.cs.nchu.edu.tw/course/CourseStructure_color_970915.pdf">下載</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#studentBachelorProject">資訊專題題目</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>修業規定</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="rule-bachelor"></tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>畢業條件明細</th>
+                <th>PDF</th>
+                <th>DOC</th>
+                <th>ODT</th>
+            </tr>
+        </thead>
+        <tbody id="graduate-bachelor"></tbody>
+    </table>
+</div>
+
+<script>
+    $("title").text("學生事務 |" + "中興資工系");
+    fetchJson("document", bindStudent);
+</script>
